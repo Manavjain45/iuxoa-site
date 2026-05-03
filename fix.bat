@@ -1,0 +1,16 @@
+@echo off
+echo Fixing corrupted node_modules...
+cd /d D:\Projects\IuXoa\1
+
+echo Removing node_modules...
+rmdir /s /q node_modules
+
+echo Removing package-lock.json...
+del /f package-lock.json
+
+echo Reinstalling dependencies (this may take a few minutes)...
+npm install
+
+echo Done! Starting dev server...
+npm run dev
+pause
