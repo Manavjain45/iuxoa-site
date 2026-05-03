@@ -247,11 +247,7 @@ function LetsWorkTogether() {
             </AnimatePresence>
           </form>
 
-          {/* Prefer a call */}
-          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.85rem', fontFamily: SANS, marginTop: 20, marginBottom: 0 }}>
-            Prefer to hop on a call?{' '}
-            <a href="tel:+917746819776" style={{ color: '#FF4D00', fontWeight: 700, textDecoration: 'none' }}>Book a call</a>{' '}instead.
-          </p>
+        
         </motion.div>
       </div>
 

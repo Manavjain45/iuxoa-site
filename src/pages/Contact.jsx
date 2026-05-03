@@ -151,10 +151,7 @@ function ContactHero() {
               </div>
             )}
 
-            <p style={{ fontFamily: SANS, fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', marginBottom: '1.5rem' }}>
-              Prefer to hop on a call?{' '}
-              <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" style={{ color: '#e85533', fontWeight: 600, textDecoration: 'none' }}>Book a call</a>{' '}instead.
-            </p>
+
 
             <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', marginBottom: '1.5rem' }} />
 
