@@ -203,12 +203,7 @@ export default function Works() {
         {/* ── HERO HEADING ── */}
         <div style={{ padding: '70px 56px 20px', position: 'relative', overflow: 'hidden' }}>
           {/* Eyebrow */}
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '1.8rem' }}>
-            <div style={{ width: 28, height: 1, background: '#C8502A' }} />
-            <span style={{ fontFamily: MONO, fontSize: '0.65rem', color: '#C8502A', letterSpacing: '0.22em', textTransform: 'uppercase' }}>Portfolio</span>
-          </motion.div>
+          
 
           {/* Big heading */}
           <div style={{ overflow: 'hidden', marginBottom: '1.5rem' }}>
@@ -305,7 +300,7 @@ export default function Works() {
         <div style={{ margin: '0 56px', borderTop: '1px solid rgba(255,255,255,0.07)', padding: '64px 0 80px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 28 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <div style={{ width: 28, height: 1, background: '#C8502A' }} />
-            <span style={{ fontFamily: MONO, fontSize: '0.62rem', color: '#C8502A', letterSpacing: '0.22em', textTransform: 'uppercase' }}>Next step</span>
+            <span style={{ fontFamily: MONO, fontSize: '0.62rem', color: '#C8502A', letterSpacing: '0.22em', textTransform: 'uppercase' }}>More Upcoming</span>
           </div>
           <div style={{ overflow: 'hidden' }}>
             <motion.p initial={{ y: '110%' }} whileInView={{ y: 0 }} viewport={{ once: true }}
