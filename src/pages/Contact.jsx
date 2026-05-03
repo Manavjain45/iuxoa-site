@@ -142,7 +142,7 @@ function ContactHero() {
                       letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'pointer',
                       transition: 'background 0.25s', whiteSpace: 'nowrap',
                     }}>
-                    SUBSCRIBE
+                    SEND
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                       <path d="M1 13L13 1M13 1H5M13 1v8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>

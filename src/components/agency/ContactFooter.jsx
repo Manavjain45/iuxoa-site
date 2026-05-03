@@ -225,7 +225,7 @@ function LetsWorkTogether() {
                 onMouseEnter={e => { if (status !== 'sending') e.currentTarget.style.transform = 'scale(1.04)'; }}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
               >
-                {status === 'sending' ? 'Sending...' : 'SUBSCRIBE'}
+                {status === 'sending' ? 'Sending...' : 'SEND'}
                 {status !== 'sending' && <span style={{ fontSize: '1rem' }}>↗</span>}
               </button>
             </div>
