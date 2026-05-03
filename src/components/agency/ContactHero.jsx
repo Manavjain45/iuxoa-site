@@ -1,11 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const HAND_IMAGE = "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=85";
 
 const SANS = "'Inter', 'Helvetica Neue', Arial, sans-serif";
 
 export default function ContactHero() {
+  const navigate = useNavigate();
   return (
     <section
       className="relative overflow-hidden"
@@ -81,8 +83,8 @@ export default function ContactHero() {
           >
             Have a project in mind? We'd love to hear about it. Let's create something great together!
           </p>
-          <a
-            href="#contact"
+          <button
+            onClick={() => navigate('/contact')}
             style={{
               display: "inline-block",
               padding: "14px 36px",
@@ -108,7 +110,7 @@ export default function ContactHero() {
             }}
           >
             GET IN TOUCH
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

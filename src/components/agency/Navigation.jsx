@@ -138,6 +138,14 @@ export default function Navigation() {
     return () => clearInterval(interval);
   }, []);
 
+  const gmtOffset = (() => {
+    const offset = -new Date().getTimezoneOffset();
+    const sign = offset >= 0 ? '+' : '-';
+    const h = Math.floor(Math.abs(offset) / 60);
+    const m = Math.abs(offset) % 60;
+    return `GMT${sign}${h}${m ? ':' + String(m).padStart(2, '0') : ''}`;
+  })();
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
@@ -285,7 +293,7 @@ export default function Navigation() {
             {/* Time */}
             <div className="hidden md:flex flex-col items-end text-[14px] leading-tight">
               <span className={`font-semibold tabular-nums tracking-wide transition-colors duration-300 ${tc}`}>{time}</span>
-              <span className={`uppercase tracking-widest text-[11px] transition-colors duration-300 ${tc40}`}>(GMT+0)</span>
+              <span className={`uppercase tracking-widest text-[11px] transition-colors duration-300 ${tc40}`}>({gmtOffset})</span>
             </div>
             <div className={`hidden md:block w-px h-6 transition-colors duration-300 ${divider}`} />
 
