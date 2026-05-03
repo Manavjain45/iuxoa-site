@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import originImg    from '../assets/team/The Origin.png';
 import teamGroupImg from '../assets/team/IMG_1806.png';
 import ayushImg   from '../assets/team/Ayush Mahanta.jpg';
@@ -909,6 +910,7 @@ function MeetOurTeam() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-8% 0px' });
   const [filter, setFilter] = useState('ALL');
+  const navigate = useNavigate();
 
   const roles = ['ALL', 'DEV', 'DESIGN', 'DATA', 'RESEARCH'];
   const filterMap = {
@@ -1032,13 +1034,13 @@ function MeetOurTeam() {
             We're always looking for passionate humans to build with.
           </div>
         </div>
-        <motion.a href="mailto:hello@iuxoa.com" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
+        <motion.button onClick={() => navigate('/contact')} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
           style={{ fontFamily: "'DM Mono', monospace", fontSize: '0.72rem', letterSpacing: '0.14em',
             textTransform: 'uppercase', padding: '14px 28px', borderRadius: 100,
-            background: '#C8502A', color: '#fff', textDecoration: 'none',
+            background: '#C8502A', color: '#fff', border: 'none', cursor: 'pointer',
             boxShadow: '0 0 30px rgba(200,80,42,0.35)' }}>
           Get in Touch →
-        </motion.a>
+        </motion.button>
       </motion.div>
 
       {/* dummy div for old heading shape compatibility */}
