@@ -209,7 +209,7 @@ export default function HowWeHelp() {
       >
         <span style={{ color:"rgba(255,255,255,0.15)", fontSize:".72rem", letterSpacing:".18em", textTransform:"uppercase" }}>{SERVICES.length} services available</span>
         <div style={{ flex:1, height:1, background:"rgba(255,255,255,0.06)" }}/>
-        <span style={{ color:"#FF4D00", fontSize:".72rem", letterSpacing:".18em", textTransform:"uppercase" }}>EST. 2023</span>
+        <span style={{ color:"#FF4D00", fontSize:".72rem", letterSpacing:".18em", textTransform:"uppercase" }}>EST. 2026</span>
       </motion.div>
     </section>
   );

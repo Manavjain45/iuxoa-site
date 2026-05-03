@@ -1,10 +1,17 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { pagesConfig } from './pages.config'
 import PageNotFound from './lib/PageNotFound';
 import { TransitionProvider } from './context/TransitionContext';
+import { useEffect } from 'react';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -20,6 +27,7 @@ function App() {
       <Router>
         {/* TransitionProvider must be inside Router so it can use useNavigate */}
         <TransitionProvider>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={
               <LayoutWrapper currentPageName={mainPageKey}>

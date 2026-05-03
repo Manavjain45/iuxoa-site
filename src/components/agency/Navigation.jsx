@@ -121,7 +121,8 @@ export default function Navigation() {
   const isWorksPage = location.pathname === '/works';
   const isAboutPage = location.pathname === '/about';
   const isContactPage = location.pathname === '/contact';
-  const isDarkPage = isWorksPage || isAboutPage || isContactPage;
+  const isLegalPage = location.pathname === '/privacy-policy' || location.pathname === '/terms-of-service';
+  const isDarkPage = isWorksPage || isAboutPage || isContactPage || isLegalPage;
 
   useEffect(() => {
     const unsub = scrollY.on('change', (v) => setIsOnHero(v < window.innerHeight * 0.7));
@@ -244,7 +245,7 @@ export default function Navigation() {
 
             {/* Logo — left side */}
             <button
-              onClick={() => scrollTo('home')}
+              onClick={() => isDarkPage ? navigateTo('/') : scrollTo('home')}
               className="mr-auto pointer-events-auto"
               style={{
                 fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif",

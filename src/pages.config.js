@@ -8,6 +8,8 @@ import Home from './pages/Home';
 import Works from './pages/Works';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 
 export const PAGES = {
@@ -15,6 +17,8 @@ export const PAGES = {
     "works": Works,
     "about": About,
     "contact": Contact,
+    "privacy-policy": PrivacyPolicy,
+    "terms-of-service": TermsOfService,
 }
 
 export const pagesConfig = {

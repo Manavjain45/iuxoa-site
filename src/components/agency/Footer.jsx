@@ -1,7 +1,9 @@
 import React from 'react';
 import { Twitter, Linkedin, Instagram, Github, ArrowUpRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <footer style={{ background: '#0a0a0a', color: '#fff', fontFamily: "'Inter', sans-serif" }} className="relative overflow-hidden">
 
@@ -67,6 +69,27 @@ export default function Footer() {
             </ul>
           </div>
 
+          <div className="md:col-span-2">
+            <h4 style={{ fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: '1.2rem', fontWeight: 600 }}>Legal</h4>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              {[
+                { label: 'Privacy Policy', path: '/privacy-policy' },
+                { label: 'Terms of Service', path: '/terms-of-service' },
+              ].map(item => (
+                <li key={item.label}>
+                  <button
+                    onClick={() => navigate(item.path)}
+                    style={{ color: 'rgba(255,255,255,0.55)', background: 'none', border: 'none', cursor: 'pointer', fontSize: '0.95rem', fontWeight: 500, transition: 'color 0.2s', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: 0, fontFamily: "'Inter', sans-serif" }}
+                    onMouseEnter={e => e.currentTarget.style.color = '#FF4D2D'}
+                    onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.55)'}
+                  >
+                    <span style={{ color: '#FF4D2D', fontSize: '0.5rem' }}>◆</span> {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Socials */}
           <div className="md:col-span-4">
             <h4 style={{ fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: '1.2rem', fontWeight: 600 }}>Follow Us</h4>
@@ -111,16 +134,19 @@ export default function Footer() {
             © 2026 <span style={{ color: '#FF4D2D' }}>iuxoa</span>. All rights reserved.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            {['Privacy Policy', 'Terms of Service'].map(item => (
-              <a
-                key={item}
-                href="#"
-                style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.8rem', textDecoration: 'none', transition: 'color 0.2s' }}
+            {[
+              { label: 'Privacy Policy', path: '/privacy-policy' },
+              { label: 'Terms of Service', path: '/terms-of-service' },
+            ].map(item => (
+              <button
+                key={item.label}
+                onClick={() => navigate(item.path)}
+                style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.8rem', background: 'none', border: 'none', cursor: 'pointer', transition: 'color 0.2s', padding: 0 }}
                 onMouseEnter={e => e.currentTarget.style.color = '#fff'}
                 onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.3)'}
               >
-                {item}
-              </a>
+                {item.label}
+              </button>
             ))}
           </div>
         </div>

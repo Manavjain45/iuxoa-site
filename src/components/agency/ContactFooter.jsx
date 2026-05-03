@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 
 const EMAILJS_SERVICE_ID  = 'service_95xs632';
@@ -265,6 +265,7 @@ function LetsWorkTogether() {
 
 export default function ContactFooter() {
   const location = useLocation();
+  const navigate = useNavigate();
   const isContactPage = location.pathname === '/contact';
   const isHomePage = location.pathname === '/';
   const hideLetsTalk = isContactPage || isHomePage;
@@ -300,7 +301,7 @@ export default function ContactFooter() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "2fr 1fr 1fr",
+          gridTemplateColumns: "2fr 1fr 1fr 1fr",
           gap: "64px",
           marginBottom: "64px",
           maxWidth: "1400px",
@@ -405,12 +406,54 @@ export default function ContactFooter() {
           </ul>
         </motion.div>
 
-        {/* Socials */}
+        {/* Legal */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2, ease: curveEase }}
+        >
+          <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "0.85rem", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px" }}>
+            (Legal)
+          </p>
+          <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "10px" }}>
+            {[
+              { label: "Privacy Policy", path: "/privacy-policy" },
+              { label: "Terms of Service", path: "/terms-of-service" },
+            ].map((item) => (
+              <li key={item.label}>
+                <button
+                  onClick={() => navigate(item.path)}
+                  style={{
+                    color: "rgba(200,200,200,0.7)",
+                    fontSize: "1.4rem",
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    fontFamily: SANS,
+                    position: "relative",
+                    display: "inline-block",
+                    transition: "color 0.25s ease",
+                    paddingBottom: "3px",
+                    padding: 0,
+                    textAlign: "left",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = "#fff"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(200,200,200,0.7)"; }}
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+        {/* Socials */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.3, ease: curveEase }}
         >
           <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "0.85rem", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "16px" }}>
             (Socials)
@@ -495,9 +538,18 @@ export default function ContactFooter() {
         <p style={{ color: "rgba(255,255,255,0.2)", fontSize: "0.75rem", margin: 0, fontFamily: SANS }}>
           © {new Date().getFullYear()} All rights reserved.
         </p>
-        <p style={{ color: "rgba(255,255,255,0.2)", fontSize: "0.75rem", margin: 0, fontFamily: SANS }}>
-          Crafted with care.
-        </p>
+        <div style={{ display: 'flex', gap: '1.5rem' }}>
+          {[
+            { label: 'Privacy Policy', path: '/privacy-policy' },
+            { label: 'Terms of Service', path: '/terms-of-service' },
+          ].map(item => (
+            <button key={item.label} onClick={() => navigate(item.path)}
+              style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', background: 'none', border: 'none', cursor: 'pointer', transition: 'color 0.2s', padding: 0, fontFamily: SANS }}
+              onMouseEnter={e => e.currentTarget.style.color = '#FF4D00'}
+              onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.3)'}
+            >{item.label}</button>
+          ))}
+        </div>
       </div>
     </footer>
     </>
