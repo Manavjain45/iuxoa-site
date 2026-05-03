@@ -225,7 +225,7 @@ export default function Works() {
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, paddingBottom: 4 }}>
               <span style={{ fontFamily: MONO, fontSize: '0.6rem', color: 'rgba(255,255,255,0.2)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Total</span>
-              <span style={{ fontFamily: DISPLAY, fontSize: '2.5rem', fontWeight: 900, color: 'rgba(255,255,255,0.07)', letterSpacing: '-0.04em', lineHeight: 1 }}>{String(projects.length).padStart(2,'0')}</span>
+              <span style={{ fontFamily: DISPLAY, fontSize: '2.5rem', fontWeight: 900, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{String(projects.length).padStart(2,'0')}</span>
             </div>
           </motion.div>
 
