@@ -151,10 +151,10 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <motion.div style={{ y: textY, paddingTop: '11rem' }} className="relative z-10 flex-1 flex flex-col justify-center px-8 lg:px-16 pb-10">
+      <motion.div style={{ y: textY, paddingTop: 'clamp(5rem, 9vh, 8rem)' }} className="relative z-10 flex-1 flex flex-col justify-center px-8 lg:px-16 pb-6">
 
         <motion.div initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '2rem' }}>
+          style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '1.25rem' }}>
           <div style={{ width: 32, height: 1, background: '#C8502A' }} />
           <span style={{ fontFamily: MONO, fontSize: '0.7rem', fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#C8502A' }}>Digital Innovation Studio</span>
         </motion.div>
@@ -163,8 +163,8 @@ export default function Hero() {
           <div style={{ overflow: 'hidden', marginBottom: '0.02em' }}>
             <motion.div initial={{ y: '110%' }} animate={{ y: 0 }} transition={{ duration: 1.1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
               style={{ display: 'flex', alignItems: 'baseline', gap: '0.22em', flexWrap: 'wrap' }}>
-              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(3.2rem, 8.5vw, 8rem)', fontWeight: 900, color: '#1a1a1a', letterSpacing: '-0.03em', lineHeight: 0.92 }}>We</span>
-              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(3rem, 8vw, 7.5rem)', fontWeight: 400, fontStyle: 'italic', color: 'rgba(0,0,0,0.22)', letterSpacing: '-0.02em', lineHeight: 0.92 }}>craft</span>
+              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(2.6rem, 7vw, 6.2rem)', fontWeight: 900, color: '#1a1a1a', letterSpacing: '-0.03em', lineHeight: 0.92 }}>We</span>
+              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(2.4rem, 6.6vw, 5.8rem)', fontWeight: 400, fontStyle: 'italic', color: 'rgba(0,0,0,0.22)', letterSpacing: '-0.02em', lineHeight: 0.92 }}>craft</span>
               <motion.span animate={{ rotate: [0, 15, 0, -10, 0] }} transition={{ duration: 3, repeat: Infinity, delay: 2 }}
                 style={{ fontSize: 'clamp(2rem,4vw,4rem)', lineHeight: 1, display: 'inline-block', marginLeft: '0.05em' }}>✦</motion.span>
             </motion.div>
@@ -172,22 +172,22 @@ export default function Hero() {
           <div style={{ overflow: 'hidden', marginBottom: '0.02em' }}>
             <motion.div initial={{ y: '110%' }} animate={{ y: 0 }} transition={{ duration: 1.1, delay: 0.52, ease: [0.22, 1, 0.36, 1] }}
               style={{ display: 'flex', alignItems: 'baseline', gap: '0.18em', flexWrap: 'wrap' }}>
-              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(3.2rem, 8.5vw, 8rem)', fontWeight: 900, color: '#1a1a1a', letterSpacing: '-0.03em', lineHeight: 0.92 }}>Games,</span>
-              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(3.2rem, 8.5vw, 8rem)', fontWeight: 900, color: '#C8502A', letterSpacing: '-0.03em', lineHeight: 0.92 }}>Apps</span>
+              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(2.6rem, 7vw, 6.2rem)', fontWeight: 900, color: '#1a1a1a', letterSpacing: '-0.03em', lineHeight: 0.92 }}>Games,</span>
+              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(2.6rem, 7vw, 6.2rem)', fontWeight: 900, color: '#C8502A', letterSpacing: '-0.03em', lineHeight: 0.92 }}>Apps</span>
             </motion.div>
           </div>
           <div style={{ overflow: 'hidden' }}>
             <motion.div initial={{ y: '110%' }} animate={{ y: 0 }} transition={{ duration: 1.1, delay: 0.64, ease: [0.22, 1, 0.36, 1] }}
               style={{ display: 'flex', alignItems: 'baseline', gap: '0.18em', flexWrap: 'wrap' }}>
-              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(2.4rem, 6.5vw, 6rem)', fontWeight: 400, fontStyle: 'italic', color: 'rgba(0,0,0,0.2)', letterSpacing: '-0.02em', lineHeight: 1 }}>&amp;</span>
-              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(3.2rem, 8.5vw, 8rem)', fontWeight: 900, color: '#1a1a1a', letterSpacing: '-0.03em', lineHeight: 0.92 }}>Digital</span>
-              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(2.8rem, 7.5vw, 7rem)', fontWeight: 400, fontStyle: 'italic', color: 'rgba(0,0,0,0.18)', letterSpacing: '-0.02em', lineHeight: 0.92 }}>Experiences.</span>
+              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(1.9rem, 5.3vw, 4.6rem)', fontWeight: 400, fontStyle: 'italic', color: 'rgba(0,0,0,0.2)', letterSpacing: '-0.02em', lineHeight: 1 }}>&amp;</span>
+              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(2.6rem, 7vw, 6.2rem)', fontWeight: 900, color: '#1a1a1a', letterSpacing: '-0.03em', lineHeight: 0.92 }}>Digital</span>
+              <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(2.2rem, 6.1vw, 5.4rem)', fontWeight: 400, fontStyle: 'italic', color: 'rgba(0,0,0,0.18)', letterSpacing: '-0.02em', lineHeight: 0.92 }}>Experiences.</span>
             </motion.div>
           </div>
         </div>
 
         <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          style={{ marginTop: '2.5rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2rem' }}>
+          style={{ marginTop: '1.5rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '2rem' }}>
           <p style={{ fontFamily: BODY, fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)', fontWeight: 400, color: 'rgba(0,0,0,0.5)', lineHeight: 1.7, maxWidth: '340px', margin: 0 }}>
             We build bold digital products — from immersive games to sleek apps — that feel alive and leave a mark.
           </p>
@@ -209,7 +209,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.15 }}
-          style={{ marginTop: '3.5rem', display: 'flex', gap: '2.5rem', flexWrap: 'wrap' }}>
+          style={{ marginTop: '1.75rem', display: 'flex', gap: '2.5rem', flexWrap: 'wrap' }}>
           {[{ num: '10+', label: 'Projects Delivered' }, { num: '10+', label: 'Research Papers' }, { num: '98%', label: 'Client Satisfaction' }].map((s, i) => (
             <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
               <span style={{ fontFamily: DISPLAY, fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 700, color: '#1a1a1a', letterSpacing: '-0.03em', lineHeight: 1 }}>{s.num}</span>
@@ -220,9 +220,9 @@ export default function Hero() {
       </motion.div>
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.6 }}
-        className="relative z-10" style={{ display: 'flex', justifyContent: 'center', paddingBottom: '2rem', gap: 8, alignItems: 'center' }}>
+        className="relative z-10" style={{ display: 'flex', justifyContent: 'center', paddingBottom: '1rem', gap: 8, alignItems: 'center' }}>
         <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.6, repeat: Infinity }}
-          style={{ width: 1, height: 36, background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.25), transparent)' }} />
+          style={{ width: 1, height: 24, background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.25), transparent)' }} />
         <span style={{ fontFamily: MONO, fontSize: '0.58rem', letterSpacing: '0.2em', color: 'rgba(0,0,0,0.25)', textTransform: 'uppercase', writingMode: 'vertical-rl' }}>Scroll</span>
       </motion.div>
     </motion.section>

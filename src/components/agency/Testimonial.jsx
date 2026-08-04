@@ -292,35 +292,35 @@ function FeedbackCard({ t, index, inView }) {
       initial={{ opacity:0, y:40 }}
       animate={inView ? { opacity:1, y:0 } : {}}
       transition={{ duration:.6, delay:.1+index*.08 }}
-      style={{ minWidth:420, maxWidth:460, flexShrink:0 }}
+      style={{ minWidth:340, maxWidth:370, flexShrink:0 }}
     >
       <GlowCard glowColor={t.glowColor} customSize className="w-full"
-        style={{ borderRadius:22, display:'flex', flexDirection:'column', padding:'36px 36px 32px' }}>
+        style={{ borderRadius:20, display:'flex', flexDirection:'column', padding:'22px 22px 20px' }}>
         <div style={{ display:'flex', flexDirection:'column', height:'100%' }}>
-          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:18 }}>
-            <Stars color={t.accent} count={t.stars} size={15}/>
-            <span style={{ padding:'5px 14px', border:`1px solid ${t.accent}45`, borderRadius:999, color:t.accent, fontSize:'.62rem', letterSpacing:'.14em', fontWeight:700, background:`${t.accent}12`, whiteSpace:'nowrap' }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:12 }}>
+            <Stars color={t.accent} count={t.stars} size={13}/>
+            <span style={{ padding:'4px 12px', border:`1px solid ${t.accent}45`, borderRadius:999, color:t.accent, fontSize:'.58rem', letterSpacing:'.14em', fontWeight:700, background:`${t.accent}12`, whiteSpace:'nowrap' }}>
               {t.tag}
             </span>
           </div>
-          <div style={{ width:32, height:2, borderRadius:999, background:t.accent, opacity:.55, marginBottom:20 }}/>
-          <p style={{ color:'rgba(255,255,255,0.78)', fontSize:'1.02rem', lineHeight:1.78, fontStyle:'italic', fontFamily:"'Georgia',serif", flexGrow:1, margin:'0 0 28px' }}>
+          <div style={{ width:28, height:2, borderRadius:999, background:t.accent, opacity:.55, marginBottom:14 }}/>
+          <p style={{ color:'rgba(255,255,255,0.78)', fontSize:'.88rem', lineHeight:1.6, fontStyle:'italic', fontFamily:"'Georgia',serif", flexGrow:1, margin:'0 0 18px' }}>
             "{t.quote}"
           </p>
-          <div style={{ display:'flex', alignItems:'center', gap:14, paddingTop:20, borderTop:'1px solid rgba(255,255,255,0.07)' }}>
+          <div style={{ display:'flex', alignItems:'center', gap:12, paddingTop:14, borderTop:'1px solid rgba(255,255,255,0.07)' }}>
             <div style={{ position:'relative', flexShrink:0 }}>
               {t.avatar ? (
-                <img src={t.avatar} alt={t.name} style={{ width:48, height:48, borderRadius:'50%', objectFit:'cover', border:`2px solid ${t.accent}50`, display:'block' }}/>
+                <img src={t.avatar} alt={t.name} style={{ width:38, height:38, borderRadius:'50%', objectFit:'cover', border:`2px solid ${t.accent}50`, display:'block' }}/>
               ) : (
-                <div style={{ width:48, height:48, borderRadius:'50%', background:`${t.accent}22`, border:`2px solid ${t.accent}50`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:'1.1rem', fontWeight:700, color:t.accent }}>
+                <div style={{ width:38, height:38, borderRadius:'50%', background:`${t.accent}22`, border:`2px solid ${t.accent}50`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:'.95rem', fontWeight:700, color:t.accent }}>
                   {t.name.split(' ').map(w=>w[0]).slice(0,2).join('')}
                 </div>
               )}
-              <div style={{ position:'absolute', bottom:1, right:1, width:11, height:11, borderRadius:'50%', background:t.accent, border:'2px solid #0a0a0a' }}/>
+              <div style={{ position:'absolute', bottom:1, right:1, width:10, height:10, borderRadius:'50%', background:t.accent, border:'2px solid #0a0a0a' }}/>
             </div>
             <div>
-              <p style={{ color:'#fff', fontWeight:700, fontSize:'.95rem', margin:0, letterSpacing:'-.01em' }}>{t.name}</p>
-              <p style={{ color:'rgba(255,255,255,0.35)', fontSize:'.8rem', margin:'4px 0 0' }}>{t.role} · {t.company}</p>
+              <p style={{ color:'#fff', fontWeight:700, fontSize:'.85rem', margin:0, letterSpacing:'-.01em' }}>{t.name}</p>
+              <p style={{ color:'rgba(255,255,255,0.35)', fontSize:'.72rem', margin:'3px 0 0' }}>{t.role} · {t.company}</p>
             </div>
           </div>
         </div>
@@ -360,7 +360,7 @@ export default function Testimonial() {
 
   return (
     <section ref={ref} style={{
-      background:'#050505', padding:'120px 0 130px',
+      background:'#050505', padding:'72px 0 80px',
       fontFamily:SANS, position:'relative', overflow:'hidden',
     }}>
       <style>{`
@@ -417,16 +417,16 @@ export default function Testimonial() {
       </div>
 
       {/* ══ HEADER ══ */}
-      <div style={{ maxWidth:1160, margin:'0 auto', padding:'0 40px', position:'relative', zIndex:6, marginBottom:64 }}>
+      <div style={{ maxWidth:1160, margin:'0 auto', padding:'0 40px', position:'relative', zIndex:6, marginBottom:40 }}>
         <motion.div initial={{ opacity:0, y:32 }} animate={inView?{opacity:1,y:0}:{}} transition={{ duration:.75 }}>
-          <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:16 }}>
+          <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:12 }}>
             <div style={{ width:28, height:1, background:'#FF4D2D', opacity:.7 }}/>
             <span style={{ color:'rgba(255,255,255,0.35)', fontSize:'.68rem', letterSpacing:'.22em', textTransform:'uppercase', fontWeight:500 }}>
               Testimonials
             </span>
           </div>
           <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'space-between', flexWrap:'wrap', gap:20 }}>
-            <h2 style={{ color:'#fff', fontSize:'clamp(2.2rem,5.5vw,4rem)', fontWeight:800, letterSpacing:'-.035em', lineHeight:1.08, margin:0 }}>
+            <h2 style={{ color:'#fff', fontSize:'clamp(1.8rem,4.2vw,3rem)', fontWeight:800, letterSpacing:'-.035em', lineHeight:1.08, margin:0 }}>
               Words from<br/>
               <span style={{ background:'linear-gradient(90deg,rgba(255,255,255,0.22) 0%,rgba(255,255,255,0.08) 100%)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>
                 those we've worked with
@@ -453,7 +453,7 @@ export default function Testimonial() {
         initial={{ opacity:0 }}
         animate={inView?{opacity:1}:{}}
         transition={{ duration:.6, delay:.8 }}
-        style={{ textAlign:'center', marginTop:52, color:'rgba(255,255,255,0.18)', fontSize:'.72rem', letterSpacing:'.15em', textTransform:'uppercase', fontWeight:500, position:'relative', zIndex:6 }}
+        style={{ textAlign:'center', marginTop:28, color:'rgba(255,255,255,0.18)', fontSize:'.72rem', letterSpacing:'.15em', textTransform:'uppercase', fontWeight:500, position:'relative', zIndex:6 }}
       >
         hover to pause · scroll to explore
       </motion.div>

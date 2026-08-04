@@ -28,7 +28,7 @@ export const IdentityCardBody = forwardRef(function IdentityCardBody(
         display: 'flex',
         flexDirection: 'column',
         borderRadius: '24px',
-        padding: '2rem',
+        padding: '1.25rem',
         background: isAccent ? 'var(--accent-color)' : 'transparent',
         color: isAccent ? 'var(--on-accent-foreground)' : '#fff',
         height: '100%',
@@ -38,9 +38,9 @@ export const IdentityCardBody = forwardRef(function IdentityCardBody(
       className={className}
     >
       {/* Avatar */}
-      <div style={{ visibility: displayAvatar ? 'visible' : 'hidden', marginBottom: '1.5rem' }}>
+      <div style={{ visibility: displayAvatar ? 'visible' : 'hidden', marginBottom: '1rem' }}>
         <div style={{
-          width: 64, height: 64, borderRadius: '50%', overflow: 'hidden',
+          width: 48, height: 48, borderRadius: '50%', overflow: 'hidden',
           border: '2px solid var(--accent-color)',
           outline: '4px solid rgba(0,0,0,0.3)',
           outlineOffset: '2px',
@@ -54,9 +54,9 @@ export const IdentityCardBody = forwardRef(function IdentityCardBody(
 
       {/* Place */}
       <p style={{
-        fontSize: '0.78rem',
+        fontSize: '0.72rem',
         color: isAccent ? 'var(--on-accent-muted-foreground)' : 'rgba(255,255,255,0.4)',
-        margin: '0 0 0.25rem',
+        margin: '0 0 0.2rem',
         letterSpacing: '0.04em',
       }}>
         {place}
@@ -64,9 +64,9 @@ export const IdentityCardBody = forwardRef(function IdentityCardBody(
 
       {/* Name */}
       <h3 style={{
-        fontSize: '1.6rem',
+        fontSize: '1.25rem',
         fontWeight: 800,
-        margin: '0 0 1.25rem',
+        margin: '0 0 0.75rem',
         letterSpacing: '-0.02em',
         color: isAccent ? 'var(--on-accent-foreground)' : '#fff',
         ...titleCss,
@@ -76,8 +76,8 @@ export const IdentityCardBody = forwardRef(function IdentityCardBody(
 
       {/* About */}
       <p style={{
-        fontSize: '0.92rem',
-        lineHeight: 1.65,
+        fontSize: '0.85rem',
+        lineHeight: 1.55,
         flexGrow: 1,
         color: isAccent ? 'rgba(255,255,255,0.88)' : 'rgba(255,255,255,0.6)',
         margin: 0,
@@ -87,7 +87,7 @@ export const IdentityCardBody = forwardRef(function IdentityCardBody(
 
       {/* Socials */}
       {socials.length > 0 && (
-        <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', alignItems: 'center' }}>
           {socials.map(s => (
             <a
               key={s.id}
@@ -127,8 +127,8 @@ export const RevealCardContainer = forwardRef(function RevealCardContainer(
   const holderRef = useRef(null);
   const overlayRef = useRef(null);
 
-  const startClip = 'circle(50px at 64px 64px)';
-  const expandClip = 'circle(160% at 64px 64px)';
+  const startClip = 'circle(38px at 44px 44px)';
+  const expandClip = 'circle(160% at 44px 44px)';
 
   const assignRef = useCallback((el) => {
     holderRef.current = el;

@@ -11,6 +11,7 @@ import sarikaImg  from '../assets/team/Sarika Ruhil.jpg';
 import { motion, AnimatePresence, useScroll, useTransform, useInView } from 'framer-motion';
 import Navigation from '../components/agency/Navigation';
 import ContactFooter from '../components/agency/ContactFooter';
+import CertificateClaim from '../components/agency/CertificateClaim';
 
 const SECTIONS = [
   {
@@ -1167,6 +1168,9 @@ export default function About() {
 
       {/* ── Meet Our Team ── */}
       <MeetOurTeam />
+
+      {/* ── Certificate claim portal ── */}
+      <CertificateClaim />
 
       {/* ── Stats ── */}
       <StatsRow />

@@ -53,7 +53,7 @@ export default function NakulaTestimonial() {
 
   return (
     <section style={{
-      background: '#080808', fontFamily: SANS, padding: '100px 80px',
+      background: '#080808', fontFamily: SANS, padding: '64px 80px',
       position: 'relative', overflow: 'hidden',
     }}>
       <SharedBgStyles/>
@@ -85,7 +85,7 @@ export default function NakulaTestimonial() {
 
       {/* ══ CONTENT ══ */}
       <div style={{
-        display: 'grid', gridTemplateColumns: '1fr 44%', gap: '5rem',
+        display: 'grid', gridTemplateColumns: '1fr 44%', gap: '3rem',
         alignItems: 'center', maxWidth: '1300px', margin: '0 auto',
         position: 'relative', zIndex: 5,
       }}>
@@ -96,12 +96,12 @@ export default function NakulaTestimonial() {
               initial={{ opacity:0, x:dir*50 }} animate={{ opacity:1, x:0 }} exit={{ opacity:0, x:dir*-50 }}
               transition={{ duration:.5, ease:[0.22,1,0.36,1] }}
             >
-              <div style={{ fontSize:'4rem', color:'#FF4D00', lineHeight:1, marginBottom:'1.25rem', fontFamily:'Georgia,serif', userSelect:'none' }}>"</div>
-              <h2 style={{ fontFamily:SANS, fontSize:'clamp(1.9rem,3.2vw,3.4rem)', fontWeight:800, lineHeight:1.18, letterSpacing:'-.03em', margin:'0 0 2.5rem' }}>
+              <div style={{ fontSize:'2.4rem', color:'#FF4D00', lineHeight:1, marginBottom:'0.75rem', fontFamily:'Georgia,serif', userSelect:'none' }}>"</div>
+              <h2 style={{ fontFamily:SANS, fontSize:'clamp(1.5rem,2.6vw,2.6rem)', fontWeight:800, lineHeight:1.18, letterSpacing:'-.03em', margin:'0 0 1.5rem' }}>
                 <span style={{ color:'#fff' }}>{t.quoteStrong}</span>
                 <span style={{ color:'rgba(255,255,255,0.22)' }}>{t.quoteFade}</span>
               </h2>
-              <div style={{ width:'100%', height:'1px', background:'rgba(255,255,255,0.07)', marginBottom:'2rem' }}/>
+              <div style={{ width:'100%', height:'1px', background:'rgba(255,255,255,0.07)', marginBottom:'1.25rem' }}/>
               <RevealCardContainer accent={t.accent} textOnAccent="#fff" mutedOnAccent="rgba(255,255,255,0.65)"
                 style={{ width:'100%', background:'#111' }}
                 base={<IdentityCardBody fullName={t.name} place={t.place} about={t.about} avatarUrl={t.avatar} avatarText={t.name.charAt(0)} scheme="plain" displayAvatar={false} socials={t.socials} cardCss={{ background:'#111' }}/>}
@@ -109,7 +109,7 @@ export default function NakulaTestimonial() {
               />
             </motion.div>
           </AnimatePresence>
-          <div style={{ display:'flex', alignItems:'center', gap:'.6rem', marginTop:'2rem' }}>
+          <div style={{ display:'flex', alignItems:'center', gap:'.6rem', marginTop:'1.25rem' }}>
             {testimonials.map((_,i)=>(
               <button key={i} onClick={()=>goTo(i)} style={{ width:i===active?36:8, height:8, borderRadius:999, background:i===active?'#FF4D00':'rgba(255,255,255,0.18)', border:'none', cursor:'pointer', padding:0, transition:'all .35s ease' }}/>
             ))}
